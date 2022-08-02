@@ -1,0 +1,8 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<!-- 절대경로로 파일을 열 때 p태그 내부의 hello! empty 문구 확인 가능,
+    보통 서버 없이 html 작성할 때 이렇게 작성하는 경우가 있음 -->
+<p th:text="'hello ' + ${name}">hello! empty</p>
+</body>
+</html>
