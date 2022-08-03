@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HelloController {
 
-    // 웹 어플리케이션에서 /hello 호출하면 아래의 메서드 호출
+    // 템플릿 엔진 방식
+    // @GetMapping은 웹 어플리케이션에서 /hello 호출하면 아래의 메서드 호출
     @GetMapping("/hello")
     public String hello(Model model) {
         model.addAttribute("data", "spring!!");
@@ -30,7 +31,7 @@ public class HelloController {
 
     // 템플릿 엔진 방식
     // 파라미터 정보는 Ctrl + P 단축키로 확인 가능
-    // RequestParam은 url을 칠 때 파라미터로 넣어주어야 하는 값, required가 true(default)면 필수 false면 선택
+    // @RequestParam은 url을 칠 때 파라미터로 넣어주어야 하는 값, required가 true(default)면 필수 false면 선택
     @GetMapping("hello-mvc")
     public String helloMvc(@RequestParam(value = "name") String name, Model model) {
         model.addAttribute("name", name);
@@ -38,7 +39,7 @@ public class HelloController {
     }
 
     // API 방식
-    // ResponseBody : http는 header부와 body부로 나눠져있는데 body부에 반환되는 데이터를 직접 넣어주겠다.
+    // @ResponseBody : http는 header부와 body부로 나눠져있는데 body부에 반환되는 데이터를 직접 넣어주겠다.
     // viewResolver 대신에 HttpMessageConverter가 동작
     // 기본 문자 : StringConverter, StringHttpMessageConverter 동작
     // 기본 객체 : JsonConverter, MappingJackson2HttpMessageConverter 동작
