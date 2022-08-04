@@ -3,12 +3,16 @@ package hello.hellospring.service;
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 // 클래스명이나 내부에 포커싱 후 Ctrl + Shift + T 누르고
 // Create New Test... 클릭하고 설정하면 자동으로 테스트 소스 및 껍데기(메서드) 생성
+// 스프링이 올라올 때 스프링 컨테이너가 @Service를 찾아 MemberService 등록(컴포넌트 스캔)
+
 public class MemberService {
 
     // private final MemberRepository memberRepository = new MemoryMemberRepository();
@@ -16,6 +20,8 @@ public class MemberService {
     // 외부에서 주입할 수 있게 변경 MemberServiceTest.java 참조
     // MemberService의 입장에서 보면 직접 new ~ 하지 않고 외부에서 memberRepository를 넣어줌
     // Dependency Injection (DI)
+    // 스프링 컨테이너에 있는 MemoryMemberRepotiory를 찾아서 주입
+
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
