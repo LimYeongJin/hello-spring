@@ -15,12 +15,14 @@ public class HelloSpringApplication {
 	1. 컴포넌트 스캔과 자동 의존관계 설정
 	스프링이 올라올 때 @Component 및 @Component를 포함하는 어노테이션을 전부 찾아(@Controller, @Service, @Repository)
 	스프링 컨테이너에 객체로 만들어 등록해 놓음(컴포넌트 스캔)
+	(Ctrl 누르고 @Controller, @Service, @Repository 클릭하여 정의한 곳으로 이동하면 @Component가 포함된 것 알 수 있음)
 	@Autowired는 스프링 컨테이너에 만들어져 있는 객체들로
 	MemberController -> MemberService -> MemberRepository 식으로 연결(자동 의존관계 설정)
 
 	컴포넌트 스캔 기준 범위는 특정 설정이 없다면
 	main()가 있는 HelloSpringApplication 클래스가 있는 패키지인
 	hello.hellospring 패키지와 하위 패키지들
+	(Ctrl 누르고 @SpringBootApplication 클릭하여 정의한 곳으로 이동하면 스캔 범위 확인 가능)
 
 
 	2. 자바 코드로 직접 스프링 빈 등록

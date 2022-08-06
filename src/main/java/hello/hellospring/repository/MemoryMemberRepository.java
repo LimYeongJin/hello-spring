@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.*;
 
 // 스프링이 실행될 때 스프링 컨테이너가 @Repository를 찾아 MemoryMemberRepository 등록(컴포넌트 스캔)
-
+// @Repository (자바 코드로 스프링 빈 등록하는 방식 사용하여 주석 처리)
 public class MemoryMemberRepository implements MemberRepository{
 
     private static Map<Long, Member> store = new HashMap<>();
