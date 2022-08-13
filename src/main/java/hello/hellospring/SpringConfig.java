@@ -1,6 +1,7 @@
 package hello.hellospring;
 
 import hello.hellospring.repository.JdbcMemberRepository;
+import hello.hellospring.repository.JdbcTemplateMemberRepository;
 import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.repository.MemoryMemberRepository;
 import hello.hellospring.service.MemberService;
@@ -33,7 +34,9 @@ public class SpringConfig {
         // 스프링이 좋은 이유 : 다형성 활용 좋음
         // 인터페이스 구현체를 편리하게 바꿔 끼기 할 수 있다.
         // 개방 폐쇄 원칙(OCP, Open-Closed Principle) : 확장에는 열려있고, 수정, 변경에는 닫혀있음
-        return new JdbcMemberRepository(dataSource);
+        //return new JdbcMemberRepository(dataSource);
+        // JdbcTemplate 관련 리포지토리 활용
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 
 }
