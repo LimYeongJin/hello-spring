@@ -13,11 +13,13 @@ import org.springframework.transaction.annotation.Transactional;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-// 통합 테스트(DB까지 연결)하기에 필요한 어노테이션 2개
-// 스프링 컨테이너와 테스트를 함께 실행해야 함 => @SpringBootTest가 해줌
-// 테스트는 반복을 할 수 있어야 함 => @Transactional => 테스트 끝나면 rollback 해줌
-// @Transactional 순서 : 트랜잭션 시작 -> 테스트 시작 -> 테스트 -> 테스트 완료 -> 롤백
-// 결론적으로 DB에 데이터가 남지 않게 됨
+/*
+    통합 테스트(DB까지 연결)하기에 필요한 어노테이션 2개
+    스프링 컨테이너와 테스트를 함께 실행해야 함 => @SpringBootTest가 해줌
+    테스트는 반복을 할 수 있어야 함 => @Transactional => 테스트 끝나면 rollback 해줌
+    @Transactional 순서 : 트랜잭션 시작 -> 테스트 시작 -> 테스트 -> 테스트 완료 -> 롤백
+    결론적으로 DB에 데이터가 남지 않게 됨
+ */
 @SpringBootTest
 @Transactional
 class MemberServiceIntegrationTest {

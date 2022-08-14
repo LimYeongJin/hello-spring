@@ -9,10 +9,11 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
-
-// test 패키지부터 아래의 아무 패키지 클릭 후 우클릭하면 원하는 범위에서 테스트 돌릴 수 있음
-// 클래스에서 테스트 돌리면 아래의 메서드들이 전부 돌아감(단 테스트되는 메서드 순서는 무작위)
-// 그렇기 때문에 테스트는 서로 순서, 의존 관계 없이 설계가 되어야 함
+/*
+    test 패키지부터 아래의 아무 패키지 클릭 후 우클릭하면 원하는 범위에서 테스트 돌릴 수 있음
+    클래스에서 테스트 돌리면 아래의 메서드들이 전부 돌아감(단 테스트되는 메서드 순서는 무작위)
+    그렇기 때문에 테스트는 서로 순서, 의존 관계 없이 설계가 되어야 함
+ */
 class MemoryMemberRepositoryTest {
 
     MemoryMemberRepository repository = new MemoryMemberRepository();
