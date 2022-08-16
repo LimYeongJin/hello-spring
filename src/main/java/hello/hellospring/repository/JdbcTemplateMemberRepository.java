@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
-// 웹 어플리케이셔으로 검증할 필요도 없고, MemberServiceIntegrationTest로 테스트하면 됨
+// 웹 어플리케이션으로 검증할 필요도 없고, MemberServiceIntegrationTest로 테스트하면 됨
 public class JdbcTemplateMemberRepository implements MemberRepository {
     private final JdbcTemplate jdbcTemplate;
 
