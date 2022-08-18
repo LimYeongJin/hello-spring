@@ -1,14 +1,12 @@
 package hello.hellospring;
 
-import hello.hellospring.repository.JdbcMemberRepository;
-import hello.hellospring.repository.JdbcTemplateMemberRepository;
-import hello.hellospring.repository.MemberRepository;
-import hello.hellospring.repository.MemoryMemberRepository;
+import hello.hellospring.repository.*;
 import hello.hellospring.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import javax.persistence.EntityManager;
 import javax.sql.DataSource;
 
 // 자바 코드로 스프링 빈 등록
@@ -16,12 +14,22 @@ import javax.sql.DataSource;
 @Configuration
 public class SpringConfig {
 
-    private DataSource dataSource;
 
+    private EntityManager em;
+
+    @Autowired
+    public SpringConfig(EntityManager em) {
+        this.em = em;
+    }
+
+    /*
+    // JPA 사용해야 해서 주석 처리
+    private DataSource dataSource;
     @Autowired
     public SpringConfig(DataSource dataSource) {
         this.dataSource = dataSource;
     }
+     */
 
     @Bean
     public MemberService memberService() {
@@ -41,7 +49,11 @@ public class SpringConfig {
         JdbcTemplate 관련 리포지토리 활용
         리포지토리 만들고 테스트하고 싶을 때, SpringConfig로 관리하면 여기만 바꿔주면 빠르게 테스트 가능
          */
-        return new JdbcTemplateMemberRepository(dataSource);
+        // return new JdbcTemplateMemberRepository(dataSource);
+        /*
+        JPA 사용
+         */
+        return new JpaMemberRepository(em);
     }
 
 }
