@@ -5,13 +5,13 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 
-/*
+/**
 모든 메서드에 시간을 측정하는 구문을 추가한다면?
 회원 가입에 시간을 측정하는 기능은 핵심 관심 사항이 아님(핵심 관심 사항은 중복 멤버 체크)
 시간을 측정하는 로직은 공통 관심 사항
 공통 관심 사항과 핵심 비즈니스 로직(핵심 관심 사항)이 섞이면 유지보수 어려움
 
-이럴 때 AOP(Aspect Oriented Programming) 사용
+이럴 때 AOP(Aspect Oriented Programming, 관점 지향 프로그래밍) 사용
 
 AOP 동작 원리
 기존 : helloController가 memberService 호출
