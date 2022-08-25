@@ -36,7 +36,7 @@ public class HelloSpringApplication {
 	정형화되지 않거나(예 : 데이터 저장소 아직 안 정해짐), 상황에 따라 구현 클래스를 변경해야 하면 설정을 통해 스프링 빈 등록
 	 */
 
-	/*
+	/**
 	DI(Dependency Injection, 의존성 주입)에는 3가지 방법이 있다.
 
 	1. 생성자 주입(최근에 가장 권장되는 방식)
