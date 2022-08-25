@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class HelloSpringApplication {
 
-	/*
+	/**
 	스프링 빈을 등록하는 2가지 방법
 	(참고 : 스프링은 스프링 컨테이너에 스프링 빈을 등록할 때 '기본적으로' 싱글톤으로 등록(유일하게 하나만 등록)하여 공유
 		같은 스프링 빈이면 모두 같은 인스턴스)
@@ -29,6 +29,7 @@ public class HelloSpringApplication {
 	@Controller는 남겨두고 @Service, @Autowired(Controller에 있는 것은 지우면 안 됨), @Repository 지운다.
 	그런 다음 SpringConfig 클래스에 자바 코드로 직접 빈 등록
 	@Configuration(설정)안에 있는 @Bean 찾아 등록
+	여러 가지 클래스를 최소한의 변경으로 테스트할 때 유용
 
 
 	참고 : 실무에서는 주로 정형화된 컨트롤러, 서비스, 리포지토리 같은 코드는 컴포넌트 스캔 사용

@@ -10,9 +10,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 
-// 스프링이 처음에 실행될 때 스프링 컨테이너라는 통이 생기는데 거기에 @Controller가 있으면
-//  MemberController 객체를 생성해 스프링 컨테이너 안에 넣는다.
-// 스프링 컨테이너에서 빈(Bean)이 관리된다 라고 표현
+/**
+스프링이 처음에 실행될 때 스프링 컨테이너라는 통이 생기는데 거기에 @Controller가 있으면
+ MemberController 객체를 생성해 스프링 컨테이너 안에 넣는다.
+스프링 컨테이너에서 빈(Bean)이 관리된다 라고 표현
+ */
 @Controller
 public class MemberController {
 
