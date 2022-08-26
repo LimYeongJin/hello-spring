@@ -20,7 +20,7 @@ public class HelloController {
     }
 
 
-    /*
+    /**
     빌드하고 실행하기
     파워셸(터미널)에서 hello-spring 폴더로 이동 후 ./gradlew.bat build하면
     build 폴더 안의 libs 안에 build되고, build된 jar 파일(plain X)을 실행하면

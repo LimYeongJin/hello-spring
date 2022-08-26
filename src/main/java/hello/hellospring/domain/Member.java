@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+// @Entity 있어야 스프링 컨테이너에 등록됨
 @Entity
 public class Member {
 
