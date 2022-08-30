@@ -24,7 +24,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 @Transactional
 class MemberServiceIntegrationTest {
 
-    /*
+    /**
     통합 테스트도 중요하지만
     진짜 좋은 테스트는 단위 테스트를 잘 만드는 것이 더 중요
      */
