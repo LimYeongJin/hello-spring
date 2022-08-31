@@ -29,7 +29,7 @@ class MemberServiceTest {
         memberService = new MemberService(memberRepository);
     }
 
-    /*
+    /**
     Given-When-Then 패턴
     Given : 테스트에서 구체화하고자 하는 행동을 시작하기 전에 테스트의 상태를 설명
     When : 구체화하고자 하는 행동
