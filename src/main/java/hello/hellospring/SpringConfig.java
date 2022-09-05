@@ -25,7 +25,7 @@ public class SpringConfig {
     public MemberService memberService() {
         return new MemberService(memberRepository);
     }
-    /*
+    /**
     // 스프링 데이터 JPA 사용해야 해서 주석 처리
 
     // JPA 관련
@@ -37,7 +37,7 @@ public class SpringConfig {
     }
      */
 
-    /*
+    /**
     // JPA 사용해야 해서 주석 처리
     private DataSource dataSource;
     @Autowired
@@ -46,7 +46,7 @@ public class SpringConfig {
     }
      */
 
-    /*
+    /**
     // 스프링 데이터 JPA 사용해야 해서 주석 처리
     @Bean
     public MemberService memberService() {
@@ -54,7 +54,7 @@ public class SpringConfig {
     }
      */
 
-    /*
+    /**
     // 스프링 데이터 JPA 사용해야 해서 주석 처리
     @Bean
     public MemberRepository memberRepository() {
@@ -79,7 +79,7 @@ public class SpringConfig {
 
     // AOP는 컴포넌트 스캔으로 등록해서 사용해도 되고
     // Spring Bean에 직접 등록하여 사용해도 됨(후자를 선호)
-    /*
+    /**
     @Bean
     public TimeTraceAop timeTraceAop() {
         return new TimeTraceAop();
