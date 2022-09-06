@@ -38,11 +38,13 @@ public class HelloController {
         return "hello-template";
     }
 
-    // API 방식
-    // @ResponseBody : http는 header부와 body부로 나눠져있는데 body부에 반환되는 데이터를 직접 넣어주겠다.
-    // viewResolver 대신에 HttpMessageConverter가 동작
-    // 기본 문자 : StringConverter, StringHttpMessageConverter 동작
-    // 기본 객체 : JsonConverter, MappingJackson2HttpMessageConverter 동작
+    /**
+    API 방식
+    @ResponseBody : http는 header부와 body부로 나눠져있는데 body부에 반환되는 데이터를 직접 넣어주겠다.
+    viewResolver 대신에 HttpMessageConverter가 동작
+    기본 문자 : StringConverter, StringHttpMessageConverter 동작
+    기본 객체 : JsonConverter, MappingJackson2HttpMessageConverter 동작
+     */
     @GetMapping("hello-string")
     @ResponseBody
     public String helloString(@RequestParam("name") String name) {
