@@ -50,10 +50,11 @@ public class HelloController {
     public String helloString(@RequestParam("name") String name) {
         return "hello " + name; // name이 spring일 경우 "hello spring" 반환
     }
-
-    // API 방식
-    // 코드 어느 정도 작성하다가 Ctrl + Shift + Enter 단축키로 자동 완성 가능
-    // json 방식으로 반환 값 보여줌
+    /**
+    API 방식
+    코드 어느 정도 작성하다가 Ctrl + Shift + Enter 단축키로 자동 완성 가능
+    json 방식으로 반환 값 보여줌
+     */
     @GetMapping("hello-api")
     @ResponseBody
     public Hello helloApi(@RequestParam("name") String name){
