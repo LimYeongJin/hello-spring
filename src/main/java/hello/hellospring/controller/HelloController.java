@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HelloController {
 
-    // 템플릿 엔진 방식
-    // @GetMapping은 웹 어플리케이션에서 /hello 호출하면 아래의 메서드 호출
+    /**
+    템플릿 엔진 방식
+    @GetMapping은 웹 어플리케이션에서 /hello 호출하면 아래의 메서드 호출
+     */
     @GetMapping("/hello")
     public String hello(Model model) {
         model.addAttribute("data", "spring!!");
@@ -28,10 +30,11 @@ public class HelloController {
     보통 실무에서는 이 jar파일을 배포
      */
 
-
-    // 템플릿 엔진 방식
-    // 파라미터 정보는 Ctrl + P 단축키로 확인 가능
-    // @RequestParam은 url을 칠 때 파라미터로 넣어주어야 하는 값, required가 true(default)면 필수 false면 선택
+    /**
+    템플릿 엔진 방식
+    파라미터 정보는 Ctrl + P 단축키로 확인 가능
+    @RequestParam은 url을 칠 때 파라미터로 넣어주어야 하는 값, required가 true(default)면 필수 false면 선택
+     */
     @GetMapping("hello-mvc")
     public String helloMvc(@RequestParam(value = "name") String name, Model model) {
         model.addAttribute("name", name);
