@@ -79,7 +79,7 @@ public class HelloController {
         }
     }
 
-    /*
+    /**
     컨트롤러(Controller) : 웹 MVC(Model, View, Controller)의 컨트롤러 역할
     서비스(Service) : 핵심 비즈니스 로직 구현
     리포지토리(Repository) : 데이터베이스에 접근, 도메인 객체를 DB에 저장하고 관리
