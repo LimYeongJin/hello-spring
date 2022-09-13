@@ -23,10 +23,11 @@ public class MemberController {
     // private final MemberService memberService = new MemberService();
 
     private final MemberService memberService;
-
-    // 스프링 컨테이너가 뜰 때 MemberController 객체가 생성이 되는데 그 때 이 생성자를 호출
-    // @Autowired가 있으면 스프링 컨테이너가 MemberService를 찾아 주입해줌(의존성 주입)
-    // 단 MemberService가 순수한 자바 클래스기 때문에 MemberService 클래스에 @Service 써줘야 함
+    /**
+    스프링 컨테이너가 뜰 때 MemberController 객체가 생성이 되는데 그 때 이 생성자를 호출
+    @Autowired가 있으면 스프링 컨테이너가 MemberService를 찾아 주입해줌(의존성 주입)
+    단 MemberService가 순수한 자바 클래스기 때문에 MemberService 클래스에 @Service 써줘야 함
+     */
     @Autowired
     public MemberController(MemberService memberService) {
         this.memberService = memberService;
