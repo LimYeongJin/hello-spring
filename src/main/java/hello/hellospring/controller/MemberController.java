@@ -18,9 +18,11 @@ import java.util.List;
 @Controller
 public class MemberController {
 
-    // 이렇게 만들 필요가 없음
-    // 여러 개의 인스턴스를 생성할 이유가 없음
-    // private final MemberService memberService = new MemberService();
+    /**
+    이렇게 만들 필요가 없음
+    여러 개의 인스턴스를 생성할 이유가 없음
+    private final MemberService memberService = new MemberService();
+     */
 
     private final MemberService memberService;
     /**
