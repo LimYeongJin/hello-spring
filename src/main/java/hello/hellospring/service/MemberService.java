@@ -24,10 +24,12 @@ public class MemberService {
 
     // private final MemberRepository memberRepository = new MemoryMemberRepository();
     private final MemberRepository memberRepository;
-    // 외부에서 주입할 수 있게 변경 MemberServiceTest.java 참조
-    // MemberService의 입장에서 보면 직접 new ~ 하지 않고 외부에서 memberRepository를 넣어줌
-    // Dependency Injection (DI, 의존성 주입)
-    // 스프링 컨테이너에 있는 MemoryMemberRepotiory를 찾아서 주입
+    /**
+        외부에서 주입할 수 있게 변경 MemberServiceTest.java 참조
+        MemberService의 입장에서 보면 직접 new ~ 하지 않고 외부에서 memberRepository를 넣어줌
+        Dependency Injection (DI, 의존성 주입)
+        스프링 컨테이너에 있는 MemoryMemberRepotiory를 찾아서 주입
+     */
 
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
