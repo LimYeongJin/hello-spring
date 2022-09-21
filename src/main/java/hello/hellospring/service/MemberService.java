@@ -49,11 +49,12 @@ public class MemberService {
             throw new IllegalStateException("이미 존재하는 회원입니다.");
         });
          */
-
+        /**
         // Optional을 바로 반환하는 게 좋지는 않음
         // 권장 방법
         // 또한 아래의 방법은 메서드로 뽑는 게 좋음
         // 블록 지정 후 Shift + Ctrl + Alt + T -> Extract Method
+         */
         validateDuplicateMember(member); // 중복 회원 검증
 
         memberRepository.save(member);
