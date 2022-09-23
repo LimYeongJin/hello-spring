@@ -40,10 +40,10 @@ public class MemberService {
      * 회원 가입
      */
     public long join(Member member) {
+        /**
         // 같은 이름이 있는 중복 회원X
         // memberRepository.findByName(member.getName()); 작성 후 Ctrl + Alt + V
         // 누르면 앞에 Optional<Member> byName = 이렇게 자동 완성되어서 변수명(또는 다른 바꿀 거) 바꿔주면 됨
-        /**
         Optional<Member> result = memberRepository.findByName(member.getName());
         result.ifPresent(m -> {
             throw new IllegalStateException("이미 존재하는 회원입니다.");
