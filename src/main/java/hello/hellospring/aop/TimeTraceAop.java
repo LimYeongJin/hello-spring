@@ -24,9 +24,11 @@ AOP 적용
 6. 실제 memberRepository 호출
 */
 
-// @Aspect 붙어주어야 AOP로 사용 가능
-// 컴포넌트(@Component) 등록하여 사용해도 되고
-// AOP 같은 경우는 SpringBean에 등록하여 사용하는 것을 선호
+/**
+@Aspect 붙어주어야 AOP로 사용 가능
+컴포넌트(@Component) 등록하여 사용해도 되고
+AOP 같은 경우는 SpringBean에 등록하여 사용하는 것을 선호
+ */
 @Aspect
 @Component
 public class TimeTraceAop {
