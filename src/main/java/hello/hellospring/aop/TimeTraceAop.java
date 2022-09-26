@@ -33,8 +33,10 @@ AOP 같은 경우는 SpringBean에 등록하여 사용하는 것을 선호
 @Component
 public class TimeTraceAop {
 
-    // @Around로 공통 관심 사항의 적용 범위를 설정해야 함
-    // hello.hellospring 패키지 하위에는 다 적용하라는 의미
+    /**
+    @Around로 공통 관심 사항의 적용 범위를 설정해야 함
+    hello.hellospring 패키지 하위에는 다 적용하라는 의미
+     */
     @Around("execution(* hello.hellospring..*(..))")
     public Object execute(ProceedingJoinPoint joinPoint) throws Throwable {
         long start = System.currentTimeMillis();
