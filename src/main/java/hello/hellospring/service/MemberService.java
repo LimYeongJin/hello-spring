@@ -16,9 +16,10 @@ import java.util.Optional;
     스프링이 올라올 때 스프링 컨테이너가 @Service를 찾아 MemberService 등록(컴포넌트 스캔)
     @Service (자바 코드로 스프링 빈 등록하는 방식 사용하여 주석 처리)
  */
-
-// JPA를 사용하면 @Transactional 사용해야 함
-// JPA는 조인들어올 때 모든 데이터 변경이 @Transactional 안에서 실행되어야 함
+/**
+JPA를 사용하면 @Transactional 사용해야 함
+JPA는 조인들어올 때 모든 데이터 변경이 @Transactional 안에서 실행되어야 함
+ */
 @Transactional
 public class MemberService {
 
