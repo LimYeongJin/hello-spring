@@ -18,8 +18,10 @@ class MemoryMemberRepositoryTest {
 
     MemoryMemberRepository repository = new MemoryMemberRepository();
 
-    // 아래 findAll() 메서드 부분 주석 읽고 올라오삼
-    // 메서드가 테스트 실행이 끝날 때마다 동작을 한다.
+    /**
+        아래 findAll() 메서드 부분 주석 읽고 올라오삼
+        메서드가 테스트 실행이 끝날 때마다 동작을 한다.
+     */
     @AfterEach
     public void afterEach() {
         repository.clearStore();
