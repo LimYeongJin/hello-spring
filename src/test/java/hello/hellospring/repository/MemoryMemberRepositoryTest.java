@@ -34,9 +34,10 @@ class MemoryMemberRepositoryTest {
         member.setName("spring");
 
         repository.save(member);
-
-        // findById()의 반환 타입이 Optional인데 Optional에서 값을 꺼낼 때는 get()으로 꺼내면 됨
-        // get()으로 꺼내는 것이 좋은 방법은 아니나 테스트 코드에서는 크게 상관 없음
+        /**
+        findById()의 반환 타입이 Optional인데 Optional에서 값을 꺼낼 때는 get()으로 꺼내면 됨
+        get()으로 꺼내는 것이 좋은 방법은 아니나 테스트 코드에서는 크게 상관 없음
+         */
         Member result = repository.findById(member.getId()).get();
 
         // 이 방법은 글자를 볼 수가 없음 -> Assertions 사용
