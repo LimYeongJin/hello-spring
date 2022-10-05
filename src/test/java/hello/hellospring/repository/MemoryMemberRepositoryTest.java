@@ -39,7 +39,7 @@ class MemoryMemberRepositoryTest {
         get()으로 꺼내는 것이 좋은 방법은 아니나 테스트 코드에서는 크게 상관 없음
          */
         Member result = repository.findById(member.getId()).get();
-
+        /**
         // 이 방법은 글자를 볼 수가 없음 -> Assertions 사용
         // System.out.println("result = " + (result == member));
 
@@ -51,6 +51,7 @@ class MemoryMemberRepositoryTest {
 
         // 위의 Assertions에 포커싱한 다음 Alt + Enter 눌러서 static import 추가하면 간단하게 사용 가능
         // import static org.assertj.core.api.Assertions.*
+         */
         assertThat(member).isEqualTo(result);
     }
 
