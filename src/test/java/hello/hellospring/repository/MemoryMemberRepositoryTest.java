@@ -73,9 +73,11 @@ class MemoryMemberRepositoryTest {
         assertThat(result).isEqualTo(member1);
     }
 
-    // findAll()까지 만들고 위 class에서 테스트 돌리면 오류남
-    // findAll()에서 저장한 member객체가 다른 곳에 영향을 미침
-    // 그렇기 때문에 테스트가 끝나고 나면 데이터를 클리어해주어야 함
+    /**
+    findAll()까지 만들고 위 class에서 테스트 돌리면 오류남
+    findAll()에서 저장한 member객체가 다른 곳에 영향을 미침
+    그렇기 때문에 테스트가 끝나고 나면 데이터를 클리어해주어야 함
+     */
     @Test
     public void findAll() {
         Member member1 = new Member();
