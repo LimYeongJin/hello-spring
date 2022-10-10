@@ -27,7 +27,9 @@ class MemoryMemberRepositoryTest {
         repository.clearStore();
     }
 
-    // 메서드 하나에서만 테스트 돌릴 수 있음
+    /**
+        메서드 하나에서만 테스트 돌릴 수 있음
+     */
     @Test
     public void save() {
         Member member = new Member();
