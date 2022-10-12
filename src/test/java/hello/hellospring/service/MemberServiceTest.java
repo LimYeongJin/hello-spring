@@ -75,7 +75,7 @@ class MemberServiceTest {
         // when
         memberService.join(member1);
         // 이런 거에 try-catch() 넣는 게 좀 애매함
-        /*
+        /**
         try {
             memberService.join(member2);
         } catch (IllegalStateException e) {
