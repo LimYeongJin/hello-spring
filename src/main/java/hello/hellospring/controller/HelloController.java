@@ -13,6 +13,7 @@ public class HelloController {
     템플릿 엔진 방식
     @GetMapping은 웹 어플리케이션에서 /hello 호출하면 아래의 메서드 호출
      */
+
     @GetMapping("/hello")
     public String hello(Model model) {
         model.addAttribute("data", "spring!!");
@@ -48,6 +49,7 @@ public class HelloController {
     기본 문자 : StringConverter, StringHttpMessageConverter 동작
     기본 객체 : JsonConverter, MappingJackson2HttpMessageConverter 동작
      */
+
     @GetMapping("hello-string")
     @ResponseBody
     public String helloString(@RequestParam("name") String name) {
