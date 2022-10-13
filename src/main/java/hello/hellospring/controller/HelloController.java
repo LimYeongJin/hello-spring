@@ -65,8 +65,9 @@ public class HelloController {
         hello.setName(name);
         return hello;
     }
-
-    // Getter & Setter 메서드 자동 생성하는 단축키는 Alt + Insert 눌러서 확인
+    /**
+        Getter & Setter 메서드 자동 생성하는 단축키는 Alt + Insert 눌러서 확인
+     */
     static class Hello {
         private String name;
 
