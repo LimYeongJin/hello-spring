@@ -35,14 +35,17 @@ public class MemberController {
         this.memberService = memberService;
     }
 
-    // GET : URL에 직접 치는 방식(주로 조회할 때 사용)
+    /**
+        GET : URL에 직접 치는 방식(주로 조회할 때 사용)
+     */
     @GetMapping("/members/new")
     public String createForm() {
         return "members/createMemberForm";
     }
-
-    // POST : 데이터를 form 같은 곳에 넣어 전달(members/createMemberForm.html 참조)
-    // MemberForm 타입을 파라미터로 넣었는데 이 안의 name 변수에 Spring이 form에 있는 name과 대응시킨다.
+    /**
+       POST : 데이터를 form 같은 곳에 넣어 전달(members/createMemberForm.html 참조)
+       MemberForm 타입을 파라미터로 넣었는데 이 안의 name 변수에 Spring이 form에 있는 name과 대응시킨다.
+     */
     @PostMapping("/members/new")
     public String create(MemberForm form) {
         Member member = new Member();
