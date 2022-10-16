@@ -19,8 +19,9 @@ public class MemoryMemberRepository implements MemberRepository{
         store.put(member.getId(), member);
         return member;
     }
-
-    // Optional.ofNullable()은 store.get(id)가 NULL이어도 감쌀 수 있음
+    /**
+        Optional.ofNullable()은 store.get(id)가 NULL이어도 감쌀 수 있음
+     */
     @Override
     public Optional<Member> findById(Long id) {
         return Optional.ofNullable(store.get(id));
