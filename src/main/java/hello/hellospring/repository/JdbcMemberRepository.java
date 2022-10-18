@@ -12,7 +12,9 @@ import java.util.Optional;
 이런 것이 있구나로 이해하면 됨
  */
 public class JdbcMemberRepository implements MemberRepository {
-    // DB 연결하기 위해 필요
+    /**
+    DB 연결하기 위해 필요
+     */
     private final DataSource dataSource;
     public JdbcMemberRepository(DataSource dataSource) {
         this.dataSource = dataSource;
