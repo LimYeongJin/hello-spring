@@ -12,8 +12,9 @@ import java.util.Optional;
  * JpaRepository Ctrl + 클릭하여 어떤 JPQL 있는지 확인
  */
 public interface SpringDataJpaMemberRepository extends JpaRepository<Member, Long>, MemberRepository {
-
-    // JPQL select m from Member m where m.name = ?
+    /**
+        JPQL select m from Member m where m.name = ?
+     */
     @Override
     Optional<Member> findByName(String name);
 }
