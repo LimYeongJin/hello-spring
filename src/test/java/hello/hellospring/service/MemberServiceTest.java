@@ -46,8 +46,10 @@ class MemberServiceTest {
         memberRepository.clearStore();
     }
 
-    // 테스트는 과감하게 한글로 바꿔도 됨
-    // 게다가 테스트 코드는 빌드될 때 실제 코드에 포함되지 않음
+    /**
+        테스트는 과감하게 한글로 바꿔도 됨
+        게다가 테스트 코드는 빌드될 때 실제 코드에 포함되지 않음
+     */
     @Test
     void 회원가입() {
         // given : 뭔가가 주어짐
