@@ -63,8 +63,9 @@ class MemberServiceTest {
         Member findMember = memberService.findOne(saveId).get();
         assertThat(member.getName()).isEqualTo(findMember.getName());
     }
-
+    /**
     // 테스트는 정상 실행 사례를 체크하는 것도 중요하지만 예외를 검증하는 것이 더 중요
+     */
     @Test
     public void 중복_회원_예외() {
         // given
