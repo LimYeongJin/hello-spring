@@ -22,8 +22,9 @@ class MemberServiceTest {
     */
     //MemoryMemberRepository memberRepository = new MemoryMemberRepository();
     MemoryMemberRepository memberRepository;
-
-    // 각 메서드들 동작하기 전에 넣어준다.
+    /**
+        각 메서드들 동작하기 전에 넣어준다.
+     */
     @BeforeEach
     public void beforeEach() {
         memberRepository = new MemoryMemberRepository();
