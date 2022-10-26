@@ -8,8 +8,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
-
-// Shift + F10은 이전에 실행했던 것(예 : 이전에 실행했던 테스트)을 다시 실행시켜줌
+/**
+    Shift + F10은 이전에 실행했던 것(예 : 이전에 실행했던 테스트)을 다시 실행시켜줌
+ */
 class MemberServiceTest {
 
     MemberService memberService;
