@@ -21,7 +21,9 @@ class MemberServiceTest {
     만약 static이 없다면? 문제가 될 수도 있음, 또한 다른 리포지토리가 아닌 같은 리포지토리로 테스트 하는 것이 좋음
     MemberService 클래스에서 작업해야 함
     */
+    /**
     //MemoryMemberRepository memberRepository = new MemoryMemberRepository();
+     */
     MemoryMemberRepository memberRepository;
     /**
         각 메서드들 동작하기 전에 넣어준다.
