@@ -15,18 +15,18 @@ class MemberServiceTest {
 
     MemberService memberService;
     /**
-    클리어해주기 위해 가져옴
-    가져올 때 MemoryMemberRepository() 하면 MemberService 인스턴스 안에 있는 new MemoryMemberRepository() 인스턴스도 있고 서로 다름
-    물론 지금은 MemoryMemberRepository 클래스 안의 store 변수가 static이라 문제는 되지 않지만
-    만약 static이 없다면? 문제가 될 수도 있음, 또한 다른 리포지토리가 아닌 같은 리포지토리로 테스트 하는 것이 좋음
-    MemberService 클래스에서 작업해야 함
+        클리어해주기 위해 가져옴
+        가져올 때 MemoryMemberRepository() 하면 MemberService 인스턴스 안에 있는 new MemoryMemberRepository() 인스턴스도 있고 서로 다름
+        물론 지금은 MemoryMemberRepository 클래스 안의 store 변수가 static이라 문제는 되지 않지만
+        만약 static이 없다면? 문제가 될 수도 있음, 또한 다른 리포지토리가 아닌 같은 리포지토리로 테스트 하는 것이 좋음
+        MemberService 클래스에서 작업해야 함
     */
     /**
     //MemoryMemberRepository memberRepository = new MemoryMemberRepository();
      */
     MemoryMemberRepository memberRepository;
     /**
-    각 메서드들 동작하기 전에 넣어준다.
+        각 메서드들 동작하기 전에 넣어준다.
      */
     @BeforeEach
     public void beforeEach() {
