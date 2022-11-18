@@ -22,6 +22,9 @@ class MemberServiceTest {
         MemberService 클래스에서 작업해야 함
     */
     /**
+     *
+     *
+     *
     //MemoryMemberRepository memberRepository = new MemoryMemberRepository();
      */
     MemoryMemberRepository memberRepository;
