@@ -36,6 +36,9 @@ class MemberServiceTest {
      *
      *
      *
+     *
+     *
+     *
     //MemoryMemberRepository memberRepository = new MemoryMemberRepository();
      */
     MemoryMemberRepository memberRepository;
